@@ -20,4 +20,8 @@ class Team extends Model
         return $this->belongsToMany(User::class);
     }
 
+    public function invitations() : HasMany {
+        return $this->hasMany(Invitation::class);
+    }
+
 }
